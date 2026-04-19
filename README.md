@@ -84,6 +84,20 @@ System prompts are fine — until you have more than one agent.
 
 A system prompt is a setting. **A Personal API is an asset.**
 
+## Why Not Just SOUL.md or MEMORY.md?
+
+Hermes ships with great built-ins — but they're designed around a different philosophy:
+
+| | Hermes Built-ins | Personal API |
+|---|---|---|
+| Who curates it | AI (auto-learned) | **You (hand-crafted)** |
+| Where it lives | `~/.hermes/` | **Your Obsidian vault** |
+| Structure | Flat files | **Layered (L0/L1/L2)** |
+| Evolution | AI decides what matters | **You decide, AI follows** |
+
+If you want the AI to just figure you out, use MEMORY.md.
+If you want to **own and design** your identity layer, use this.
+
 ## Core Concepts
 
 ### ME.md — Your Identity Layer
