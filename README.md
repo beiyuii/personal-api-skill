@@ -3,8 +3,10 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Category](https://img.shields.io/badge/category-identity-blue)
 ![Hermes Agent](https://img.shields.io/badge/for-Hermes%20Agent-purple)
+![Obsidian](https://img.shields.io/badge/vault-Obsidian-7c3aed)
 
-> Turn your Obsidian vault into a **personal identity layer** — so any AI agent instantly knows who you are, how you think, and how to work with you.
+> **The identity layer for Obsidian users on Hermes Agent.**
+> Turn your vault into a personal API — so any AI agent instantly knows who you are, how you think, and how to work with you.
 
 ## The Problem
 
@@ -14,7 +16,7 @@ Every time you start a new AI session, the agent knows **nothing** about you. Yo
 - "Give me structured output with priorities, not walls of text"
 - "Challenge my assumptions, don't just agree"
 
-**Personal API** solves this with two files in your Obsidian vault.
+**Personal API** solves this with two Markdown files in your Obsidian vault.
 
 ## What It Does
 
@@ -75,28 +77,49 @@ That's it. The agent will self-configure.
 
 System prompts are fine — until you have more than one agent.
 
-|                                   | System Prompt | Personal API |
-| --------------------------------- | :-----------: | :----------: |
-| Portable across tools             |      ❌       |      ✅      |
-| Version controlled (git)          |      ❌       |      ✅      |
-| Composable (layered loading)      |      ❌       |      ✅      |
+|                                    | System Prompt | Personal API |
+| ---------------------------------- | :-----------: | :----------: |
+| Portable across tools              |      ❌       |      ✅      |
+| Version controlled (git)           |      ❌       |      ✅      |
+| Composable (layered loading)       |      ❌       |      ✅      |
 | Lives in your vault, not vendor DB |      ❌       |      ✅      |
 
 A system prompt is a setting. **A Personal API is an asset.**
 
 ## Why Not Just SOUL.md or MEMORY.md?
 
-Hermes ships with great built-ins — but they're designed around a different philosophy:
+Hermes ships with great built-ins (`SOUL.md`, `MEMORY.md`, `AGENTS.md`) — but they're built around a different philosophy:
 
-| | Hermes Built-ins | Personal API |
-|---|---|---|
-| Who curates it | AI (auto-learned) | **You (hand-crafted)** |
-| Where it lives | `~/.hermes/` | **Your Obsidian vault** |
-| Structure | Flat files | **Layered (L0/L1/L2)** |
-| Evolution | AI decides what matters | **You decide, AI follows** |
+|                     | Hermes Built-ins           | Personal API                   |
+| ------------------- | -------------------------- | ------------------------------ |
+| **Who curates it**  | AI (auto-learned)          | **You (hand-crafted)**         |
+| **Where it lives**  | `~/.hermes/`               | **Your Obsidian vault**        |
+| **Structure**       | Flat files                 | **Layered (L0 / L1 / L2)**     |
+| **Evolution model** | AI decides what matters    | **You decide, AI follows**     |
+| **Integration**     | Hermes-specific            | **Any agent that reads files** |
 
-If you want the AI to just figure you out, use MEMORY.md.
-If you want to **own and design** your identity layer, use this.
+> If you want the AI to just figure you out — use `MEMORY.md`.
+> If you want to **own and design** your identity layer — use this.
+
+## A Scenario Built-ins Can't Handle
+
+You have three projects. Each needs the AI to behave differently:
+
+- **Project A** — rigorous, data-driven, no fluff
+- **Project B** — creative, brainstorming mode
+- **Project C** — teaching mode, explain everything
+
+With `SOUL.md`, you get **one global personality**.
+
+With Personal API, your `AGENT.md` declares **context-switching rules**, and your Obsidian folder structure acts as the trigger:
+
+```
+cd 20.projects/project-a/   →  AI reads project-a's AGENT.md override
+cd 20.projects/project-b/   →  AI switches to brainstorming mode
+```
+
+**Vault structure = behavior routing.**
+This is the kind of control flat-file built-ins can't give you.
 
 ## Core Concepts
 
@@ -126,16 +149,16 @@ Rules for AI assistants:
 
 This skill ships `ME.md` and `AGENT.md`. For the full layered loading experience, the agent also looks for the following structure — **you create these as your second brain grows**:
 
-| Layer | Path                | Purpose                                    | Shipped? |
-| :---: | ------------------- | ------------------------------------------ | :------: |
-|   0   | `ME.md`             | Identity — **always read first**           |    ✅    |
-|   0   | `AGENT.md`          | AI behavior contract                       |    ✅    |
-|   1   | `now.md`            | Current state — what you're focused on     |    —     |
-|   2   | `10.identity/`      | Deep identity — values, vision             |    —     |
-|   2   | `20.skills/`        | Skill library — your capabilities          |    —     |
-|   2   | `30.knowledge/`     | Knowledge base — accumulated learnings     |    —     |
-|  Log  | `40.memory-stream/` | Memory stream — growth trajectory          |    —     |
-| Index | `50.maps/`          | Navigation maps — global overview          |    —     |
+| Layer | Path                | Purpose                                | Shipped? |
+| :---: | ------------------- | -------------------------------------- | :------: |
+|   0   | `ME.md`             | Identity — **always read first**       |    ✅    |
+|   0   | `AGENT.md`          | AI behavior contract                   |    ✅    |
+|   1   | `now.md`            | Current state — what you're focused on |    —     |
+|   2   | `10.identity/`      | Deep identity — values, vision         |    —     |
+|   2   | `20.skills/`        | Skill library — your capabilities      |    —     |
+|   2   | `30.knowledge/`     | Knowledge base — accumulated learnings |    —     |
+|  Log  | `40.memory-stream/` | Memory stream — growth trajectory      |    —     |
+| Index | `50.maps/`          | Navigation maps — global overview      |    —     |
 
 Start with just `ME.md` and `AGENT.md`. Add layers when you actually need them.
 
