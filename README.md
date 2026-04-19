@@ -1,13 +1,18 @@
 # Personal API Skill for Hermes Agent
 
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Category](https://img.shields.io/badge/category-identity-blue)
+![Hermes Agent](https://img.shields.io/badge/for-Hermes%20Agent-purple)
+
 > Turn your Obsidian vault into a **personal identity layer** — so any AI agent instantly knows who you are, how you think, and how to work with you.
 
 ## The Problem
 
 Every time you start a new AI session, the agent knows **nothing** about you. You waste the first 10 minutes repeating:
-- "I'm a PM, use business terms"
-- "Give me structured output, not walls of text"
-- "Challenge me, don't just agree"
+
+- "I'm a solo developer, not a team — don't suggest 'align with stakeholders'"
+- "Give me structured output with priorities, not walls of text"
+- "Challenge my assumptions, don't just agree"
 
 **Personal API** solves this with two files in your Obsidian vault.
 
@@ -38,13 +43,11 @@ personal-api/
 
 ## Quick Start
 
-### 1. Install the skill
+### 1. Clone and install
 
 ```bash
-# Copy to your Hermes skills directory
-cp -r personal-api ~/.hermes/skills/
-
-# Enable it
+git clone https://github.com/beiyuii/personal-api-skill.git
+cp -r personal-api-skill ~/.hermes/skills/personal-api
 hermes skills enable personal-api
 ```
 
@@ -68,11 +71,25 @@ Tell any Hermes Agent:
 
 That's it. The agent will self-configure.
 
+## Why Not Just a System Prompt?
+
+System prompts are fine — until you have more than one agent.
+
+|                                   | System Prompt | Personal API |
+| --------------------------------- | :-----------: | :----------: |
+| Portable across tools             |      ❌       |      ✅      |
+| Version controlled (git)          |      ❌       |      ✅      |
+| Composable (layered loading)      |      ❌       |      ✅      |
+| Lives in your vault, not vendor DB |      ❌       |      ✅      |
+
+A system prompt is a setting. **A Personal API is an asset.**
+
 ## Core Concepts
 
 ### ME.md — Your Identity Layer
 
 Your "About Me" page. Structured sections:
+
 - **One-liner intro** — Who you are, what you do, what you pursue
 - **Core principles** — 3-7 non-negotiable values that guide your decisions
 - **Thinking patterns** — How you process information (structured? visual? first-principles?)
@@ -83,6 +100,7 @@ Your "About Me" page. Structured sections:
 ### AGENT.md — The Behavior Contract
 
 Rules for AI assistants:
+
 - Language preference & technical term handling
 - Output format (structured vs. free-form)
 - Decision-making style (data-driven vs. intuition)
@@ -90,23 +108,26 @@ Rules for AI assistants:
 - Memory management (what to persist across sessions)
 - Special scenarios (creative mode vs. rigorous mode)
 
-### Vault Navigation
+## Recommended Vault Layout
 
-A layered exploration strategy the AI follows:
+This skill ships `ME.md` and `AGENT.md`. For the full layered loading experience, the agent also looks for the following structure — **you create these as your second brain grows**:
 
-| Layer | File | Purpose |
-|-------|------|---------|
-| 0 | `ME.md` | Identity — **always read first** |
-| 1 | `now.md` | Current state — what you're focused on |
-| 2 | `10.identity/` | Deep identity — values, vision |
-| 2 | `20.skills/` | Skill library — your capabilities |
-| 2 | `30.knowledge/` | Knowledge base — accumulated learnings |
-| Logs | `40.memory-stream/` | Memory stream — growth trajectory |
-| Index | `50.maps/` | Navigation maps — global overview |
+| Layer | Path                | Purpose                                    | Shipped? |
+| :---: | ------------------- | ------------------------------------------ | :------: |
+|   0   | `ME.md`             | Identity — **always read first**           |    ✅    |
+|   0   | `AGENT.md`          | AI behavior contract                       |    ✅    |
+|   1   | `now.md`            | Current state — what you're focused on     |    —     |
+|   2   | `10.identity/`      | Deep identity — values, vision             |    —     |
+|   2   | `20.skills/`        | Skill library — your capabilities          |    —     |
+|   2   | `30.knowledge/`     | Knowledge base — accumulated learnings     |    —     |
+|  Log  | `40.memory-stream/` | Memory stream — growth trajectory          |    —     |
+| Index | `50.maps/`          | Navigation maps — global overview          |    —     |
+
+Start with just `ME.md` and `AGENT.md`. Add layers when you actually need them.
 
 ## Why This Works
 
-- **No vendor lock-in** — Plain Markdown files, works with any AI tool
+- **No vendor lock-in** — Plain Markdown, works with any AI tool that reads files
 - **Version controlled** — Your identity evolves; git tracks the changelog
 - **Privacy-first** — Data stays in your local vault, never uploaded
 - **Composable** — Add/remove sections without breaking the structure
@@ -121,13 +142,16 @@ A layered exploration strategy the AI follows:
 ## Requirements
 
 - [Hermes Agent](https://github.com/beiyuii/hermes-agent) ≥ v1.0
-- Obsidian vault with `OBSIDIAN_VAULT_PATH` env var set
-- Optional: [Obsidian Local REST API](https://coddingtonbear.github.io/obsidian-local-rest-api/) for live sync
+- An Obsidian vault with `OBSIDIAN_VAULT_PATH` environment variable set
 
 ## Author
 
-Built by [@beiyuii](https://github.com/beiyuii) — a system independently developed and validated through daily use.
+Built and battle-tested daily by [@beiyuii](https://github.com/beiyuii).
 
 ## License
 
 MIT
+
+---
+
+If this resonates, a ⭐ helps others find it.
