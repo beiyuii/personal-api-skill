@@ -1,24 +1,15 @@
 ---
 name: personal-api
 description: Turn your Obsidian vault into a personal identity layer — any AI agent knows who you are, how you think, and how to work with you in under 30 seconds.
-version: 1.0.0
-author: beiyuii
+version: "1.0.0"
 license: MIT
-category: identity
-tags:
-  - obsidian
-  - identity
-  - knowledge-management
-  - personal-api
-  - second-brain
+compatibility: Requires Obsidian vault with standard Markdown structure
 metadata:
+  author: beiyuii
   hermes:
-    related_skills: []
-    requires:
-      - obsidian-vault
-    platform:
-      - macos
-      - linux
+    tags: [obsidian, identity, knowledge-management, personal-api, second-brain]
+    category: identity
+    requires_tools: []
 ---
 
 # Personal API
