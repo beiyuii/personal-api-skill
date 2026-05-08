@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="30.00 0.00 985.00 775.00" width="985" height="775" style="background-color:#ffffff; max-width:100%; height:auto;">
+  <defs>
+    <marker id="arrow-ec4899" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 12 6 L 0 12 z" fill="#ec4899"/></marker>
+    <marker id="arrow-64748b" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 12 6 L 0 12 z" fill="#64748b"/></marker>
+    <marker id="arrow-3b82f6" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 12 6 L 0 12 z" fill="#3b82f6"/></marker>
+  </defs>
+  <rect x="30.00" y="0.00" width="985.00" height="775.00" fill="#ffffff"/>
+  <rect x="300.00" y="30.00" width="400.00" height="60.00" rx="12" ry="12" fill="#e0f2fe" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="250.00" y="125.00" width="500.00" height="55.00" rx="12" ry="12" fill="#e0f2fe" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="60.00" y="230.00" width="420.00" height="42.00" rx="12" ry="12" fill="#dbeafe" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="520.00" y="230.00" width="460.00" height="42.00" rx="12" ry="12" fill="#fce7f3" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="60.00" y="310.00" width="200.00" height="80.00" rx="12" ry="12" fill="#dcfce7" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="280.00" y="310.00" width="200.00" height="80.00" rx="12" ry="12" fill="#dcfce7" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="60.00" y="405.00" width="200.00" height="80.00" rx="12" ry="12" fill="#fef9c3" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="280.00" y="405.00" width="200.00" height="80.00" rx="12" ry="12" fill="#fef9c3" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="520.00" y="310.00" width="145.00" height="80.00" rx="12" ry="12" fill="#f1f5f9" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="675.00" y="310.00" width="145.00" height="80.00" rx="12" ry="12" fill="#fef9c3" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="830.00" y="310.00" width="145.00" height="80.00" rx="12" ry="12" fill="#fee2e2" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="520.00" y="402.00" width="145.00" height="80.00" rx="12" ry="12" fill="#dbeafe" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="675.00" y="402.00" width="145.00" height="80.00" rx="12" ry="12" fill="#d1fae5" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="830.00" y="402.00" width="145.00" height="80.00" rx="12" ry="12" fill="#e0e7ff" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="520.00" y="494.00" width="145.00" height="80.00" rx="12" ry="12" fill="#fae8ff" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="675.00" y="494.00" width="145.00" height="80.00" rx="12" ry="12" fill="#fce7f3" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="830.00" y="494.00" width="145.00" height="80.00" rx="12" ry="12" fill="#f5f5f4" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="60.00" y="600.00" width="920.00" height="45.00" rx="12" ry="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2" opacity="1.0"/>
+  <rect x="60.00" y="665.00" width="220.00" height="30.00" rx="12" ry="12" fill="#dbeafe" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="295.00" y="665.00" width="220.00" height="30.00" rx="12" ry="12" fill="#fce7f3" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="530.00" y="665.00" width="220.00" height="30.00" rx="12" ry="12" fill="#dcfce7" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="765.00" y="665.00" width="220.00" height="30.00" rx="12" ry="12" fill="#fef9c3" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <path d="M 500.00,90.00 L 500.00,125.00" stroke="#64748b" stroke-width="2" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-64748b)"/>
+  <path d="M 400.00,180.00 L 270.00,230.00" stroke="#64748b" stroke-width="2" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-64748b)"/>
+  <path d="M 600.00,180.00 L 730.00,230.00" stroke="#64748b" stroke-width="2" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-64748b)"/>
+  <path d="M 270.00,272.00 L 160.00,310.00" stroke="#3b82f6" stroke-width="2" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-3b82f6)"/>
+  <path d="M 750.00,272.00 L 593.00,310.00" stroke="#ec4899" stroke-width="2" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ec4899)"/>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="490.00" y="45.30">🎯 ME.md</tspan><tspan x="490.00" y="67.80">核心身份入口 | Layer 0</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="490.00" y="136.90">⚡ 00.context — 当前状态</tspan><tspan x="490.00" y="154.40">now.md / open-questions / projects</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="15" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="260.00" y="242.75">🔵 轨道 A：身份档案馆（人工策展）</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="15" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="740.00" y="242.75">🩷 轨道 B：知识生产区（Karpathy 知识编译器）</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="150.00" y="321.05">10.identity</tspan><tspan x="150.00" y="337.30">价值观 / 愿景</tspan><tspan x="150.00" y="353.55">思维模型 / 优势短板</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="370.00" y="321.05">20.skills</tspan><tspan x="370.00" y="337.30">全栈工程 / Agent 工程化</tspan><tspan x="370.00" y="353.55">记忆架构 / 成本优化</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="150.00" y="416.05">40.memory-stream</tspan><tspan x="150.00" y="432.30">日记 / 周报 / 月报</tspan><tspan x="150.00" y="448.55">反思 / 里程碑</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="370.00" y="416.05">50.maps</tspan><tspan x="370.00" y="432.30">全局导航 / 技能图</tspan><tspan x="370.00" y="448.55">主题 MOC</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="582.50" y="321.05">00.system</tspan><tspan x="582.50" y="337.30">中控室</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="737.50" y="321.05">10.capture</tspan><tspan x="737.50" y="337.30">收件台</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="892.50" y="321.05">20.intelligence</tspan><tspan x="892.50" y="337.30">情报室</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="582.50" y="413.05">30.research</tspan><tspan x="582.50" y="429.30">研究室</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="737.50" y="413.05">40.notes</tspan><tspan x="737.50" y="429.30">卡片柜</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="892.50" y="413.05">50.frameworks</tspan><tspan x="892.50" y="429.30">工具墙</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="582.50" y="505.05">60.projects</tspan><tspan x="582.50" y="521.30">项目室</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="737.50" y="505.05">70.outputs</tspan><tspan x="737.50" y="521.30">发布厅</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="892.50" y="505.05">90.archive</tspan><tspan x="892.50" y="521.30">档案库</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="510.00" y="611.05">知识流转 ▶  capture → intelligence / research → notes → frameworks / projects → outputs → archive</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="160.00" y="675.20">🔵 轨道 A 身份档案馆</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="395.00" y="675.20">🩷 轨道 B 知识生产区</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="630.00" y="675.20">🟢 身份层/笔记</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="865.00" y="675.20">🟡 记忆/导航</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="20" fill="#1e293b" text-anchor="start" opacity="1.0"><tspan x="350.00" y="727.00">Obsidian 第二大脑 · 整体架构图</tspan></text>
+</svg>

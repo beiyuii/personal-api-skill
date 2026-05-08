@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0.00 -15.00 1005.00 780.00" width="1005" height="780" style="background-color:#ffffff; max-width:100%; height:auto;">
+  <defs>
+    <marker id="arrow-10b981" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 12 6 L 0 12 z" fill="#10b981"/></marker>
+    <marker id="arrow-8b5cf6" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 12 6 L 0 12 z" fill="#8b5cf6"/></marker>
+    <marker id="arrow-6366f1" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 12 6 L 0 12 z" fill="#6366f1"/></marker>
+  </defs>
+  <rect x="0.00" y="-15.00" width="1005.00" height="780.00" fill="#ffffff"/>
+  <rect x="200.00" y="15.00" width="600.00" height="45.00" rx="12" ry="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" opacity="1.0"/>
+  <rect x="30.00" y="80.00" width="940.00" height="50.00" rx="12" ry="12" fill="#f0f9ff" stroke="#93c5fd" stroke-width="2" opacity="1.0"/>
+  <rect x="30.00" y="180.00" width="120.00" height="120.00" rx="12" ry="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2" opacity="1.0"/>
+  <rect x="185.00" y="170.00" width="250.00" height="110.00" rx="12" ry="12" fill="#f1f5f9" stroke="#6b7280" stroke-width="2" opacity="1.0"/>
+  <rect x="450.00" y="170.00" width="250.00" height="110.00" rx="12" ry="12" fill="#fef9c3" stroke="#6b7280" stroke-width="2" opacity="1.0"/>
+  <rect x="715.00" y="170.00" width="250.00" height="110.00" rx="12" ry="12" fill="#fee2e2" stroke="#6b7280" stroke-width="2" opacity="1.0"/>
+  <rect x="185.00" y="292.00" width="250.00" height="110.00" rx="12" ry="12" fill="#dbeafe" stroke="#6b7280" stroke-width="2" opacity="1.0"/>
+  <rect x="450.00" y="292.00" width="250.00" height="110.00" rx="12" ry="12" fill="#d1fae5" stroke="#6b7280" stroke-width="2" opacity="1.0"/>
+  <rect x="715.00" y="292.00" width="250.00" height="110.00" rx="12" ry="12" fill="#e0e7ff" stroke="#6b7280" stroke-width="2" opacity="1.0"/>
+  <rect x="185.00" y="414.00" width="250.00" height="110.00" rx="12" ry="12" fill="#fae8ff" stroke="#6b7280" stroke-width="2" opacity="1.0"/>
+  <rect x="450.00" y="414.00" width="250.00" height="110.00" rx="12" ry="12" fill="#fce7f3" stroke="#6b7280" stroke-width="2" opacity="1.0"/>
+  <rect x="715.00" y="414.00" width="250.00" height="110.00" rx="12" ry="12" fill="#f5f5f4" stroke="#6b7280" stroke-width="2" opacity="1.0"/>
+  <rect x="30.00" y="540.00" width="940.00" height="50.00" rx="12" ry="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2" opacity="1.0"/>
+  <rect x="30.00" y="610.00" width="940.00" height="65.00" rx="12" ry="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2" opacity="1.0"/>
+  <rect x="30.00" y="700.00" width="145.00" height="35.00" rx="12" ry="12" fill="#fef9c3" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="190.00" y="700.00" width="145.00" height="35.00" rx="12" ry="12" fill="#fee2e2" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="350.00" y="700.00" width="145.00" height="35.00" rx="12" ry="12" fill="#d1fae5" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="510.00" y="700.00" width="145.00" height="35.00" rx="12" ry="12" fill="#e0e7ff" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="670.00" y="700.00" width="145.00" height="35.00" rx="12" ry="12" fill="#fce7f3" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <rect x="830.00" y="700.00" width="145.00" height="35.00" rx="12" ry="12" fill="#f5f5f4" stroke="#1e1e1e" stroke-width="2" opacity="1.0"/>
+  <path d="M 150.00,230.00 L 185.00,230.00" stroke="#10b981" stroke-width="3" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-10b981)"/>
+  <path d="M 150.00,260.00 L 185.00,350.00" stroke="#10b981" stroke-width="2" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8,4" marker-end="url(#arrow-10b981)"/>
+  <path d="M 310.00,280.00 L 310.00,294.00" stroke="#6366f1" stroke-width="2" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-6366f1)"/>
+  <path d="M 560.00,280.00 L 560.00,294.00" stroke="#6366f1" stroke-width="2" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-6366f1)"/>
+  <path d="M 810.00,280.00 L 810.00,294.00" stroke="#6366f1" stroke-width="2" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-6366f1)"/>
+  <path d="M 310.00,404.00 L 310.00,418.00" stroke="#8b5cf6" stroke-width="2" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8b5cf6)"/>
+  <path d="M 560.00,404.00 L 560.00,418.00" stroke="#8b5cf6" stroke-width="2" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8b5cf6)"/>
+  <path d="M 810.00,404.00 L 810.00,418.00" stroke="#8b5cf6" stroke-width="2" fill="none" opacity="1.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8b5cf6)"/>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="20" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="500.00" y="42.00">🏰 Knowledge Palace v2 · 知识流转全景图</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="500.00" y="107.92">融合方法论:  PARA | Johnny.Decimal | Zettelkasten 卢曼卡片 | MOC/LYT | Karpathy LLM Wiki | 记忆宫殿</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="90.00" y="202.30">📥 输入源</tspan><tspan x="90.00" y="218.55"></tspan><tspan x="90.00" y="234.80">文章/论文</tspan><tspan x="90.00" y="251.05">闪念/灵感</tspan><tspan x="90.00" y="267.30">读书笔记</tspan><tspan x="90.00" y="283.55">行业新闻</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="310.00" y="203.55">00.system 「中控室」</tspan><tspan x="310.00" y="219.80">方法论 / 目录边界</tspan><tspan x="310.00" y="236.05">Agent 操作指南</tspan><tspan x="310.00" y="252.30">迁移计划</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="575.00" y="203.55">10.capture 「收件台」</tspan><tspan x="575.00" y="219.80">inbox / 待处理</tspan><tspan x="575.00" y="236.05">raw / 原始材料</tspan><tspan x="575.00" y="252.30">网页摘录 / 论文</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="840.00" y="203.55">20.intelligence 「情报室」</tspan><tspan x="840.00" y="219.80">AI 日报 / 周报</tspan><tspan x="840.00" y="236.05">行业信号 / 趋势</tspan><tspan x="840.00" y="252.30">产品动态</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="310.00" y="325.55">30.research 「研究室」</tspan><tspan x="310.00" y="341.80">PKM 方法论研究</tspan><tspan x="310.00" y="358.05">AI Agent 方向</tspan><tspan x="310.00" y="374.30">一人公司 / OPC</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="575.00" y="325.55">40.notes 「卡片柜」</tspan><tspan x="575.00" y="341.80">文献笔记 (L)</tspan><tspan x="575.00" y="358.05">永久卡片 (P) ← 核心资产</tspan><tspan x="575.00" y="374.30">MOC 主题地图</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="840.00" y="325.55">50.frameworks 「工具墙」</tspan><tspan x="840.00" y="341.80">SOP / 工作流</tspan><tspan x="840.00" y="358.05">技术框架</tspan><tspan x="840.00" y="374.30">产品 / 思维模型</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="310.00" y="447.55">60.projects 「项目室」</tspan><tspan x="310.00" y="463.80">股票预测系统</tspan><tspan x="310.00" y="480.05">项目复盘记录</tspan><tspan x="310.00" y="496.30">决策日志</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="575.00" y="447.55">70.outputs 「发布厅」</tspan><tspan x="575.00" y="463.80">口播脚本 (6期)</tspan><tspan x="575.00" y="480.05">文章 / 报告</tspan><tspan x="575.00" y="496.30">演讲稿</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="840.00" y="447.55">90.archive 「档案库」</tspan><tspan x="840.00" y="463.80">旧结构 / 废弃方案</tspan><tspan x="840.00" y="480.05">冻结资料</tspan><tspan x="840.00" y="496.30">仅供追溯</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="500.00" y="568.15">知识生命周期 ▶  capture → intelligence / research → notes → frameworks / projects → outputs → archive</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="500.00" y="637.30">核心公式:</tspan><tspan x="500.00" y="653.55">文件夹 = &quot;这东西处于哪个生命周期阶段&quot;  |  MOC = &quot;它在认知上属于什么主题&quot;  |  wikilinks = &quot;它和什么有关&quot;</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="102.50" y="720.42">捕获</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="262.50" y="720.42">→ 情报/研究</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="422.50" y="720.42">→ 笔记</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="582.50" y="720.42">→ 框架/项目</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="742.50" y="720.42">→ 输出</tspan></text>
+  <text font-family="Excalifont, Virgil, 'Segoe UI', sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1.0"><tspan x="902.50" y="720.42">→ 归档</tspan></text>
+</svg>

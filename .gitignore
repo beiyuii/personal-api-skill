@@ -1,0 +1,32 @@
+# Personal vault data — NEVER commit your filled-in identity files
+# These are user-specific outputs from setup.sh, not skill assets.
+*.local.md
+ME.local.md
+AGENT.local.md
+
+# Obsidian config (personal preferences)
+.obsidian/
+.trash/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Test scaffolds (from running setup.sh into temp vaults)
+/tmp-vault/
+/test-vault/
+
+# Build artifacts
+dist/
+
+# Node / Python toolchains (in case contributors add tooling later)
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
