@@ -2,6 +2,8 @@
 
 > **Turn your Obsidian vault into an AI identity layer.** Any AI agent reads `ME.md` + `AGENT.md` and instantly knows who you are, how you think, and how to work with you — built on Knowledge Palace v2 (PARA + Johnny.Decimal + Zettelkasten + MOC + LLM Wiki + Memory Palace).
 
+中文说明：[README.zh-CN.md](./README.zh-CN.md)
+
 [![version](https://img.shields.io/badge/version-2.0.0-blue)](./SKILL.md)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![category](https://img.shields.io/badge/category-identity-purple)](#)
