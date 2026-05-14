@@ -1,306 +1,161 @@
 ---
 name: personal-api
-description: Turn your Obsidian vault into a personal identity layer for AI. Any agent reads ME.md and AGENT.md and instantly knows who you are, how you think, and how to work with you. Scaffolds a complete Knowledge Palace v2 second-brain system (PARA + Johnny.Decimal + Zettelkasten + MOC + LLM Wiki + Memory Palace). Use when setting up a new Obsidian vault for AI collaboration, onboarding AI assistants, or building a structured knowledge management system.
+version: "2.0.2"
+description: Turn an Obsidian vault into an AI-readable personal identity layer. Use when setting up ME.md and AGENT.md, scaffolding the full Knowledge Palace v2 structure, onboarding AI assistants, or maintaining the vault contract. Default setup creates the complete 30.knowledge system; --minimal creates only the lightweight identity layer.
 license: MIT
 compatibility: Requires an Obsidian vault. Works with any AI agent that can read files (Claude Code, Codex, Cursor, ChatGPT, Gemini, OpenClaw, Hermes Agent). macOS, Linux, Windows (WSL).
 metadata:
   author: beiyuii
-  version: "2.0.0"
+  version: "2.0.2"
   category: identity
   tags: "obsidian identity knowledge-management personal-api second-brain digital-twin pkm zettelkasten para moc knowledge-palace ai-agent context-engineering prompt-engineering"
   related_skills: "personal-knowledge-vault knowledge-palace-builder"
 ---
 
-# Personal API — AI Identity Layer for Your Obsidian Vault
+# Personal API
 
-> **30-second elevator pitch:** Stop re-onboarding every AI assistant. This skill scaffolds an "API documentation" for yourself inside your Obsidian vault — `ME.md` is your identity contract, `AGENT.md` is your behavior contract. Any AI that reads these two files knows who you are, how you think, and how to work with you in under 30 seconds.
+Personal API is a lightweight routing skill for creating and maintaining an AI-readable identity layer inside an Obsidian vault.
 
-> **Agent-agnostic by design.** This is not tied to any single agent runtime. Drop it next to Claude Code, Codex, Cursor, ChatGPT, Gemini, or your own custom LLM agent — it works the same way: a folder convention + two markdown contracts that any LLM can read.
+The skill has three core contracts:
 
----
+1. `ME.md` — identity contract.
+2. `AGENT.md` — behavior contract.
+3. `30.knowledge/00.system/methodology.md` — Knowledge Palace v2 operating manual for the knowledge-production track.
 
-## Why This Exists
+Default setup creates the full Knowledge Palace v2 structure, including `30.knowledge/`. Use `--minimal` only when the user explicitly wants the identity layer without the knowledge-production system.
 
-Every new chat, every new project, every new AI tool — you start from zero. You re-explain your preferences, your tech stack, your communication style, your constraints. By the time the AI is "calibrated," you've burned 10 minutes and a chunk of context window.
+## Trigger Scenarios
 
-**Personal API solves this with three primitives:**
+Use this skill when the user wants to:
 
-1. **`ME.md`** — Your single-page identity contract. Read once, AI knows you.
-2. **`AGENT.md`** — Your behavior contract. Defines the rules of engagement.
-3. **A vault navigation layer** — When AI needs more depth, it knows exactly where to look.
+- create a new AI-readable Obsidian vault structure;
+- install or refresh `ME.md` / `AGENT.md`;
+- set up Claude/Codex adapter files for a vault;
+- initialize the `30.knowledge/` Knowledge Palace v2 system;
+- explain how AI agents should read and operate inside the vault;
+- validate or package this skill for release.
 
-This is built on a real, battle-tested second-brain system (Knowledge Palace v2) used daily by [@beiyuii](https://github.com/beiyuii), not a toy demo.
+Do not use this skill to invent or fill in the user's real identity content. AI may explain fields and provide examples, but the user must provide the actual personal answers.
 
----
+## Workflows
 
-## Methodology — Standing on Six Shoulders
+### 1. Install Personal API
 
-Personal API is not just two markdown templates. It is the entry point to a knowledge architecture that fuses six well-established methodologies:
+Use when the user provides an Obsidian vault path and wants the scaffold installed.
 
-| Methodology | Core Idea | How We Use It |
-|---|---|---|
-| **PARA** (Tiago Forte) | Sort by *actionability*, not topic | Lifecycle directories: capture → intel → research → notes → frameworks → outputs → archive |
-| **Johnny.Decimal** | Numbered prefixes keep locations stable | `00 / 10 / 20 / … / 90` partitions; topics never need to be re-filed |
-| **Zettelkasten** (Luhmann) | Atomic permanent notes that compound | `40.notes/permanent/` holds only ideas you have genuinely thought through |
-| **MOC / LYT** (Nick Milo) | Maps over deep folders | `40.notes/moc/` gives semantic indexes, decoupled from file structure |
-| **LLM Wiki** (Karpathy) | Strict separation of raw vs compiled | `10.capture/raw/` (raw material) ≠ `40.notes/literature/` (compiled) |
-| **Memory Palace** | Spatial metaphor reduces lookup cost | Each top-level folder is a "room" — you know what is inside before opening |
+Read:
 
-**The core formula:**
+- `scripts/setup.sh`
+- `templates/ME.md`
+- `templates/AGENT.md`
+- `templates/CLAUDE.md`
+- `templates/AGENTS.md`
+- `templates/methodology.md`
 
-> Folders solve **lifecycle**. MOCs solve **topic membership**. Wikilinks solve **relationships**.
-
-Don't make folders carry semantics. The deeper your folder tree, the harder it is to maintain.
-
----
-
-## Dual-Track Architecture
-
-The vault has **two tracks that don't interfere with each other** — this is what makes AI collaboration safe:
-
-| Track | Scope | Maintained By | AI Role |
-|---|---|---|---|
-| **Track A: Identity Archive** | `ME.md`, `00.context/`, `10.identity/`, `20.skills/`, `40.memory-stream/`, `50.maps/` | 100% human-curated | Read-only; can suggest but not rewrite |
-| **Track B: Knowledge Production** | Everything under `30.knowledge/` | AI-led organization, human review | Active librarian — compile, link, archive |
-
-This separation is the contract. Identity is yours. Knowledge production scales with AI.
-
----
-
-## Directory Structure
-
-```
-your-vault/
-│
-├── ME.md                          # ⭐ Layer 0 — Identity entry. AI reads this first.
-├── AGENT.md                       # AI behavior contract
-├── README.md                      # Vault description (for humans)
-├── CLAUDE.md                      # Claude Code instructions (auto-loaded)
-├── AGENTS.md                      # Codex / OpenAI Agent instructions
-│
-├── 00.context/                    # 🟡 Layer 1 — current state (changes fastest)
-│   ├── now.md                     # What I'm working on right now
-│   ├── open-questions.md          # Unresolved questions
-│   └── projects/
-│       ├── project-overview.md
-│       ├── active/
-│       └── archived/
-│
-├── 10.identity/                   # 🔵 Layer 2 — deep identity (rarely changes)
-│   ├── values.md                  # Values & principles
-│   ├── vision.md                  # Long-term vision
-│   ├── thinking-models.md         # Mental models
-│   └── strengths-gaps.md          # Strengths & blind spots
-│
-├── 20.skills/                     # 🔵 Layer 2 — capability map
-│   └── [skill-name].md            # One file per core skill
-│
-├── 30.knowledge/                  # 🟢 Knowledge production (AI-led)
-│   ├── 00.system/                 # 🏛️ Methodology & rules (this skill installs methodology.md here)
-│   ├── 10.capture/                # 📥 Inbox — unprocessed material
-│   │   ├── inbox/                 # Raw thoughts, links to triage
-│   │   └── raw/                   # Source material (papers, articles)
-│   ├── 20.intelligence/           # 📡 Time-sensitive industry signals
-│   │   ├── ai/
-│   │   └── business/
-│   ├── 30.research/               # 🔬 Long-form research projects
-│   ├── 40.notes/                  # 🗃️ Note core asset
-│   │   ├── literature/            # Compiled literature notes (AI-compiled, human-reviewed)
-│   │   ├── permanent/             # Atomic Zettelkasten cards
-│   │   └── moc/                   # Maps of Content
-│   ├── 50.frameworks/             # 🔧 Reusable methods & SOPs
-│   │   ├── technical/
-│   │   └── operation/
-│   ├── 60.projects/               # 📁 Project-bound knowledge
-│   ├── 70.outputs/                # 📢 Publishable content
-│   └── 90.archive/                # 🗄️ Read-only archives
-│
-├── 40.memory-stream/              # 📓 Daily logs, reflections, milestones
-│   ├── daily/
-│   ├── reflections/
-│   └── milestones.md
-│
-└── 50.maps/                       # 🗺️ Global navigation
-    ├── index.md                   # Global hub
-    └── skills-map.md              # Skills overview
-```
-
-### Knowledge flow
-
-```
-Capture → Intelligence/Research → Literature notes → Permanent cards/Frameworks → Projects/Outputs → Archive
-   ↕              ↕                       ↕                    ↕                       ↕                ↕
-10.capture    20/30                40.literature          40.permanent              60/70           90.archive
-                                                          50.frameworks
-```
-
----
-
-## Installation
-
-### One-command setup (recommended)
+Run:
 
 ```bash
-# 1. Point at your vault
-export OBSIDIAN_VAULT_PATH="/path/to/your/vault"
-
-# 2. Run the scaffolder
+export OBSIDIAN_VAULT_PATH="/path/to/vault"
 bash scripts/setup.sh
-
-# 3. Open your vault and fill in the [PLACEHOLDER]s in ME.md and AGENT.md
 ```
 
-This creates the full Knowledge Palace v2 directory tree, copies the identity templates, and drops a `methodology.md` into `30.knowledge/00.system/` so AI agents know the rules immediately.
+Expected full-mode result:
 
-### Manual install
+- identity layer files at vault root;
+- thin agent adapters `CLAUDE.md` and `AGENTS.md`;
+- Track A directories and stubs;
+- full `30.knowledge/` tree;
+- `30.knowledge/00.system/methodology.md`.
+
+For identity-only setup:
 
 ```bash
-cp templates/ME.md          "$OBSIDIAN_VAULT_PATH/ME.md"
-cp templates/AGENT.md       "$OBSIDIAN_VAULT_PATH/AGENT.md"
-cp templates/methodology.md "$OBSIDIAN_VAULT_PATH/30.knowledge/00.system/methodology.md"
+bash scripts/setup.sh --minimal
 ```
 
----
+Minimal mode must not create `30.knowledge/`.
 
-## Usage
+### 2. Fill Identity And Behavior Contracts
 
-After scaffolding, the standard read order for *any* AI agent is:
+Use when the user is ready to customize `ME.md` and `AGENT.md`.
 
-1. **`ME.md`** — Layer 0, identity (always)
-2. **`00.context/now.md`** — Layer 1, current focus
-3. **`50.maps/index.md`** — Global navigation
-4. **`30.knowledge/00.system/methodology.md`** — Rules of the knowledge production track
+Read:
 
-Tell your AI assistant:
+- `templates/ME.md`
+- `templates/AGENT.md`
+- `references/operation-boundaries.md`
 
-> "Read my ME.md and AGENT.md to understand my context. Then proceed."
+Rules:
 
-Or, with Claude Code, the rules in `CLAUDE.md` auto-load — no prompt needed.
+- explain each placeholder in plain language;
+- ask the user for real identity facts when needed;
+- do not fabricate personal history, values, or preferences;
+- keep Track A identity files human-owned unless the user explicitly authorizes edits.
 
-### Prompt examples
+### 3. Start Knowledge Production
 
-| You say | AI does |
-|---|---|
-| "Help me file this article." | Reads methodology.md → puts raw material in `10.capture/raw/` → compiles to `40.notes/literature/YYYY-MM-DD-topic.md` → proposes permanent-card candidates |
-| "What's on my plate?" | Reads `00.context/now.md` → returns active projects + open questions |
-| "Draft a reply for me." | Reads `ME.md` + `AGENT.md` → matches your tone (e.g. terse, structured, opinionated) |
-| "Weekly review." | Scans `40.memory-stream/daily/` for the past 7 days → summarizes wins, blockers, lessons |
+Use when the user wants AI-assisted knowledge organization under `30.knowledge/`.
 
----
+Read:
 
-## AI Operation Boundaries
+- `references/architecture.md`
+- `references/vault-layout.md`
+- `templates/methodology.md`
 
-This is the contract. Pin it.
+Rules:
 
-| Action | Allowed? |
-|---|---|
-| Read any markdown file | ✅ |
-| Create new files under `30.knowledge/` | ✅ |
-| Reorganize `30.knowledge/` content | ✅ |
-| Update `50.maps/index.md` links | ✅ |
-| Update `00.context/now.md` (factually) | ✅ (carefully) |
-| Modify `ME.md` core identity | ❌ |
-| Modify `10.identity/` values/vision | ❌ |
-| Bulk delete files | ❌ (requires explicit user confirmation) |
-| Fill in `[PLACEHOLDER]`s in ME.md | ❌ (the user must answer those) |
+- raw material enters `30.knowledge/10.capture/`;
+- compiled notes go to `30.knowledge/40.notes/literature/`;
+- permanent notes and frameworks require human review;
+- do not modify Track A core identity content without explicit authorization.
 
----
+### 4. Validate And Package
 
-## Frontmatter Spec
+Use before publishing or reviewing this skill.
 
-Every meaningful note should have:
+Read:
 
-```yaml
----
-aliases: [Alias 1, Alias 2]    # Obsidian search aliases
-updated: YYYY-MM-DD            # Last update — critical for freshness signals
-layer: 0/1/2                   # Identity tracks only (0=core, 1=current, 2=deep)
-tags: [tag1, tag2]             # Status & type tags
-description: One-line summary  # AI-readable file purpose
----
+- `scripts/validate_skill.py`
+- `scripts/package_skillhub.sh`
+- `CHANGELOG.md`
+
+Run:
+
+```bash
+bash -n scripts/setup.sh
+python scripts/validate_skill.py
+bash scripts/package_skillhub.sh
+python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.0.2-skillhub.zip
 ```
 
-Suggested status & type tags:
+The source version, README badges, changelog, setup output, and release zip must agree.
 
-| Tag | Meaning |
+## Resource Routing
+
+| Need | Read |
 |---|---|
-| `#status/raw` | Unprocessed source material |
-| `#status/compiled` | Literature note (AI-compiled, reviewed) |
-| `#status/permanent` | Permanent atomic note |
-| `#status/published` | External output |
-| `#type/intelligence` | Time-sensitive signal |
-| `#type/research` | Long-form research |
-| `#type/framework` | Reusable method or SOP |
-| `#type/output` | Publication |
+| Product overview | `README.md` or `README.zh-CN.md` |
+| Architecture and method | `references/architecture.md` |
+| Expected vault tree | `references/vault-layout.md` |
+| AI permission boundaries | `references/operation-boundaries.md` |
+| Health checks and maintenance | `references/maintenance.md` |
+| Install behavior | `scripts/setup.sh` |
+| Release checks | `scripts/validate_skill.py` |
 
----
+## Version History
 
-## Maintenance — Monthly Health Check
+### 2.0.2 — 2026-05-14
 
-Once a month, ask your AI:
+- Converted `SKILL.md` into a lightweight routing layer.
+- Moved long-form architecture and operating guidance into `references/`.
+- Added adapter templates for Claude and Codex/OpenAI agents.
+- Added validation and package scripts.
+- Aligned source files, setup output, changelog, and SkillHub release package.
 
-> "Run a vault health check."
+### 2.0.0 — 2026-05-08
 
-It should scan for:
+- Added full Knowledge Palace v2 scaffold and `--minimal` setup mode.
 
-- Items in `10.capture/inbox/` older than 7 days (stale triage)
-- `00.context/` files with outdated project status
-- Orphan notes (no backlinks)
-- Missing connections (notes that should link but don't)
-- Files with `updated:` older than 3 months on important paths
+### 1.0.0 — 2026-04-19
 
----
-
-## FAQ
-
-**Q: How do I migrate my existing notes in?**
-A: Don't bulk-migrate. Scaffold the structure first, move only what you actively use. Park the rest in `30.knowledge/90.archive/` for traceability.
-
-**Q: Do I need frontmatter on every note?**
-A: Important notes — yes (at least `updated:` and `description:`). Captures and quick logs — no, until they get promoted.
-
-**Q: Can AI write my ME.md for me?**
-A: No. AI can explain each field, but the answers must be yours. This is your digital twin — fake answers fake the twin.
-
-**Q: How is this different from plain PARA?**
-A: PARA is action-oriented. Personal API + Knowledge Palace v2 layers Zettelkasten atomic notes, MOC semantic maps, LLM Wiki raw/compiled separation, and the dual-track contract specifically designed for AI collaboration on top of PARA.
-
-**Q: What if my AI ignores the rules?**
-A: Use a `CLAUDE.md` / `AGENTS.md` at the vault root with hard rules ("Track A is read-only"). Most modern AI tools auto-load these.
-
-**Q: Privacy?**
-A: Your filled-in `ME.md` and `AGENT.md` contain personal context. **Do not commit them to public repos.** Add them to `.gitignore` if your vault is versioned. The skill itself ships only templates, never your data.
-
----
-
-## Customization
-
-After running `setup.sh`, edit the templates in your vault. The `[PLACEHOLDER]` markers show exactly what to fill in. Each field has a comment explaining the intent.
-
-- Update `ME.md` monthly — identity evolves
-- Keep `AGENT.md` stable — consistency helps AI assistants
-- Use `[[wikilinks]]` to connect related notes
-- The `layer:` frontmatter helps AI prioritize what to read
-
----
-
-## Tips
-
-- **Don't deepen folders.** Three levels max. Use MOCs for topical depth.
-- **Every capture has a half-life.** If `inbox/` rots for >7 days, you are capturing too much.
-- **Permanent notes earn their place.** A note becomes permanent when it has been linked to twice.
-- **AI > you at compiling. You > AI at deciding.** Let AI drive the literature track. You drive the permanent track.
-
----
-
-## Related Skills
-
-- `personal-knowledge-vault` — Cross-project entry skill that lets *other* AI projects pull context from this vault
-- `knowledge-palace-builder` — Full step-by-step vault construction guide (the original methodology document)
-
----
-
-## Credits
-
-Designed and battle-tested daily by [@beiyuii](https://github.com/beiyuii).
-Methodology synthesizes work from Tiago Forte, Niklas Luhmann, Nick Milo, Andrej Karpathy, and Johnny Decimal.
+- Initial identity-layer skill with `ME.md`, `AGENT.md`, and setup script.

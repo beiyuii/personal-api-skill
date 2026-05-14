@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0.2] — 2026-05-14
+
+### Added
+- `references/` resource layer for architecture, vault layout, operation boundaries, and maintenance guidance.
+- `templates/CLAUDE.md` and `templates/AGENTS.md` thin agent adapters.
+- `templates/vault.gitignore` privacy helper, installed only if the vault has no `.gitignore`.
+- `scripts/validate_skill.py` for source, setup-output, and optional dist-package validation.
+- `scripts/package_skillhub.sh` for reproducible SkillHub zip generation.
+- `agents/openai.yaml` release metadata.
+
+### Changed
+- Reworked `SKILL.md` into a lightweight routing layer with top-level `version: "2.0.2"`.
+- Kept default setup as full Knowledge Palace v2 installation, including `30.knowledge/`.
+- Clarified that `--minimal` creates only the identity layer and must not create `30.knowledge/`.
+- `setup.sh` now creates `CLAUDE.md`, `AGENTS.md`, `00.context/projects/project-overview.md`, `10.identity/thinking-models.md`, and `10.identity/strengths-gaps.md`.
+- Updated English and Chinese READMEs to match actual setup behavior and release validation.
+
+### Fixed
+- Aligned source version, README badges, changelog, setup output, and SkillHub package naming.
+- Removed stale changelog claims about discovery metadata that was not present in the current manifest.
+
+---
+
 ## [2.0.0] — 2026-05-08
 
 ### Added
@@ -19,20 +42,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `.gitignore` to prevent committing personal vault data.
 - `CHANGELOG.md` (this file).
 - `SKILL.md` enrichment: methodology basis, dual-track architecture, AI operation boundaries, frontmatter spec, FAQ, monthly health-check routine.
-- `frontmatter.metadata.use_cases` (5 cases) and `frontmatter.metadata.examples` (3 prompt/effect pairs) for discovery.
 
 ### Changed
 - **BREAKING**: `setup.sh` now creates the full Knowledge Palace v2 directory structure by default. Run with `--minimal` to preserve v1 behavior.
-- **BREAKING**: `metadata.hermes:` removed from SKILL.md. Replaced with `metadata.compatibility:` listing supported agents (Claude Code, Codex, Cursor, ChatGPT, Gemini, any LLM agent).
 - Repositioned as agent-agnostic — explicitly tested with multiple agent runtimes, not tied to any single one.
 - `setup.sh` hardened: `set -euo pipefail`, `--help` flag, idempotent file creation, separate Track A / Track B sections.
-- SKILL.md grew from 3KB → ~15KB with methodology depth borrowed from Knowledge Palace v2.
+- SKILL.md grew from 3KB to about 15KB with methodology depth borrowed from Knowledge Palace v2.
 - ME.md template comments genericized (removed personal example values).
 
 ### Migration from v1.x
 1. Re-run `bash scripts/setup.sh` — your existing `ME.md` and `AGENT.md` are preserved untouched.
 2. Read the newly installed `30.knowledge/00.system/methodology.md` for the knowledge-production operating rules.
-3. If you don't want the `30.knowledge/` tree, run `bash scripts/setup.sh --minimal` instead (no destructive changes; existing files are kept).
+3. If you do not want the `30.knowledge/` tree, run `bash scripts/setup.sh --minimal` instead.
 
 ---
 
