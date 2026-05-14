@@ -24,7 +24,7 @@ Before publishing a new skill package, run:
 bash -n scripts/setup.sh
 python scripts/validate_skill.py
 bash scripts/package_skillhub.sh
-python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.0.2-skillhub.zip
+python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.0.3-skillhub.zip
 ```
 
 The release is not ready if:

@@ -14,7 +14,7 @@ import zipfile
 from pathlib import Path
 
 
-VERSION = "2.0.2"
+VERSION = "2.0.3"
 ROOT = Path(__file__).resolve().parents[1]
 
 FULL_EXPECTED_PATHS = [
@@ -71,7 +71,6 @@ PACKAGE_EXPECTED_PATHS = [
     "templates/CLAUDE.md",
     "templates/AGENTS.md",
     "templates/methodology.md",
-    "templates/vault.gitignore",
     "references/architecture.md",
     "references/vault-layout.md",
     "references/operation-boundaries.md",
@@ -105,22 +104,22 @@ def validate_source() -> None:
     frontmatter = extract_frontmatter(skill)
 
     assert_true(
-        re.search(r'^version:\s*"2\.0\.2"\s*$', frontmatter, re.MULTILINE) is not None,
-        "SKILL.md must contain top-level version: \"2.0.2\"",
+        re.search(rf'^version:\s*"{re.escape(VERSION)}"\s*$', frontmatter, re.MULTILINE) is not None,
+        "SKILL.md must contain top-level version: \"2.0.3\"",
     )
     assert_true(
-        re.search(r'^\s+version:\s*"2\.0\.2"\s*$', frontmatter, re.MULTILINE) is not None,
-        "SKILL.md metadata.version must be \"2.0.2\"",
+        re.search(rf'^\s+version:\s*"{re.escape(VERSION)}"\s*$', frontmatter, re.MULTILINE) is not None,
+        "SKILL.md metadata.version must be \"2.0.3\"",
     )
 
     readme = read("README.md")
     readme_cn = read("README.zh-CN.md")
     changelog = read("CHANGELOG.md")
 
-    badge = "version-2.0.2-blue"
-    assert_true(badge in readme, "README.md version badge must be 2.0.2")
-    assert_true(badge in readme_cn, "README.zh-CN.md version badge must be 2.0.2")
-    assert_true("## [2.0.2] — 2026-05-14" in changelog, "CHANGELOG.md must contain 2.0.2 entry")
+    badge = "version-2.0.3-blue"
+    assert_true(badge in readme, "README.md version badge must be 2.0.3")
+    assert_true(badge in readme_cn, "README.zh-CN.md version badge must be 2.0.3")
+    assert_true("## [2.0.3] — 2026-05-14" in changelog, "CHANGELOG.md must contain 2.0.3 entry")
     assert_true("frontmatter.metadata.use_cases" not in changelog, "CHANGELOG.md must not claim missing use_cases metadata")
     assert_true("frontmatter.metadata.examples" not in changelog, "CHANGELOG.md must not claim missing examples metadata")
 
@@ -175,12 +174,12 @@ def validate_dist(dist: Path) -> None:
         skill = zf.read("SKILL.md").decode("utf-8")
         frontmatter = extract_frontmatter(skill)
         assert_true(
-            re.search(r'^version:\s*"2\.0\.2"\s*$', frontmatter, re.MULTILINE) is not None,
-            "zip SKILL.md top-level version must be 2.0.2",
+            re.search(rf'^version:\s*"{re.escape(VERSION)}"\s*$', frontmatter, re.MULTILINE) is not None,
+            "zip SKILL.md top-level version must be 2.0.3",
         )
         assert_true(
-            re.search(r'^\s+version:\s*"2\.0\.2"\s*$', frontmatter, re.MULTILINE) is not None,
-            "zip SKILL.md metadata.version must be 2.0.2",
+            re.search(rf'^\s+version:\s*"{re.escape(VERSION)}"\s*$', frontmatter, re.MULTILINE) is not None,
+            "zip SKILL.md metadata.version must be 2.0.3",
         )
 
 

@@ -2,7 +2,7 @@
 
 > 把你的 Obsidian vault 变成 AI 可以读取的“个人身份层”。任何 AI 助手只要先读 `ME.md` 和 `AGENT.md`，就能理解你是谁、你怎么思考、你希望它怎么协作。
 
-[![version](https://img.shields.io/badge/version-2.0.2-blue)](./SKILL.md)
+[![version](https://img.shields.io/badge/version-2.0.3-blue)](./SKILL.md)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![category](https://img.shields.io/badge/category-identity-purple)](#)
 [![platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20WSL-lightgrey)](#)
@@ -123,7 +123,7 @@ your-vault/
 bash -n scripts/setup.sh
 python scripts/validate_skill.py
 bash scripts/package_skillhub.sh
-python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.0.2-skillhub.zip
+python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.0.3-skillhub.zip
 ```
 
 ---

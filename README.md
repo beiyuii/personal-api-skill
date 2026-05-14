@@ -4,7 +4,7 @@
 
 中文说明：[README.zh-CN.md](./README.zh-CN.md)
 
-[![version](https://img.shields.io/badge/version-2.0.2-blue)](./SKILL.md)
+[![version](https://img.shields.io/badge/version-2.0.3-blue)](./SKILL.md)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![category](https://img.shields.io/badge/category-identity-purple)](#)
 [![platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20WSL-lightgrey)](#)
@@ -107,13 +107,13 @@ Validate the skill before publishing:
 bash -n scripts/setup.sh
 python scripts/validate_skill.py
 bash scripts/package_skillhub.sh
-python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.0.2-skillhub.zip
+python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.0.3-skillhub.zip
 ```
 
 The generated SkillHub package is:
 
 ```text
-dist/skillhub/personal-api-2.0.2-skillhub.zip
+dist/skillhub/personal-api-2.0.3-skillhub.zip
 ```
 
 Older local packages under `dist/skillhub/` are historical artifacts.

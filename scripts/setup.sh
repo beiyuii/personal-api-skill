@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Personal API — Setup Script (v2.0.2)
+# Personal API — Setup Script (v2.0.3)
 # Scaffolds the identity layer and, by default, the full Knowledge Palace v2
 # 30.knowledge system inside an Obsidian vault.
 #
@@ -56,7 +56,6 @@ required_templates=(
     "CLAUDE.md"
     "AGENTS.md"
     "methodology.md"
-    "vault.gitignore"
 )
 
 for f in "${required_templates[@]}"; do
@@ -95,6 +94,29 @@ ensure_file() {
     fi
 }
 
+create_vault_gitignore_if_missing() {
+    local path="$VAULT/.gitignore"
+    if [ ! -f "$path" ]; then
+        cat > "$path" <<'EOF'
+# Personal API generated vault files can contain private identity context.
+# Keep filled-in identity contracts out of public repositories unless you
+# intentionally want to version them in a private repo.
+
+ME.md
+AGENT.md
+CLAUDE.md
+AGENTS.md
+
+.obsidian/
+.trash/
+.DS_Store
+EOF
+        echo "Created .gitignore"
+    else
+        echo "Preserved existing .gitignore"
+    fi
+}
+
 echo "Track A — Identity Archive"
 
 mkdir -p "$VAULT/00.context/projects/active"
@@ -109,7 +131,7 @@ copy_if_missing "$TEMPLATES_DIR/ME.md"              "$VAULT/ME.md"        "ME.md
 copy_if_missing "$TEMPLATES_DIR/AGENT.md"           "$VAULT/AGENT.md"     "AGENT.md"
 copy_if_missing "$TEMPLATES_DIR/CLAUDE.md"          "$VAULT/CLAUDE.md"    "CLAUDE.md"
 copy_if_missing "$TEMPLATES_DIR/AGENTS.md"          "$VAULT/AGENTS.md"    "AGENTS.md"
-copy_if_missing "$TEMPLATES_DIR/vault.gitignore"    "$VAULT/.gitignore"   ".gitignore"
+create_vault_gitignore_if_missing
 
 ensure_file "$VAULT/00.context/now.md"                         "00.context/now.md"
 ensure_file "$VAULT/00.context/open-questions.md"              "00.context/open-questions.md"

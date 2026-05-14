@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VERSION="2.0.2"
+VERSION="2.0.3"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 DIST_DIR="$ROOT/dist/skillhub"
@@ -20,7 +20,6 @@ required_paths=(
     "templates/CLAUDE.md"
     "templates/AGENTS.md"
     "templates/methodology.md"
-    "templates/vault.gitignore"
     "references/architecture.md"
     "references/vault-layout.md"
     "references/operation-boundaries.md"

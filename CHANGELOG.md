@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0.3] — 2026-05-14
+
+### Fixed
+- Removed `templates/vault.gitignore` from the upload package because ClawHub rejects that file type.
+- `scripts/setup.sh` now generates the vault `.gitignore` inline when the target vault does not already have one.
+- Kept the same stable scaffold behavior as `2.0.2`: full mode creates `30.knowledge/`, while `--minimal` does not.
+
+---
+
 ## [2.0.2] — 2026-05-14
 
 ### Added

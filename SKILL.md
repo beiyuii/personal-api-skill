@@ -1,12 +1,12 @@
 ---
 name: personal-api
-version: "2.0.2"
+version: "2.0.3"
 description: Turn an Obsidian vault into an AI-readable personal identity layer. Use when setting up ME.md and AGENT.md, scaffolding the full Knowledge Palace v2 structure, onboarding AI assistants, or maintaining the vault contract. Default setup creates the complete 30.knowledge system; --minimal creates only the lightweight identity layer.
 license: MIT
 compatibility: Requires an Obsidian vault. Works with any AI agent that can read files (Claude Code, Codex, Cursor, ChatGPT, Gemini, OpenClaw, Hermes Agent). macOS, Linux, Windows (WSL).
 metadata:
   author: beiyuii
-  version: "2.0.2"
+  version: "2.0.3"
   category: identity
   tags: "obsidian identity knowledge-management personal-api second-brain digital-twin pkm zettelkasten para moc knowledge-palace ai-agent context-engineering prompt-engineering"
   related_skills: "personal-knowledge-vault knowledge-palace-builder"
@@ -125,7 +125,7 @@ Run:
 bash -n scripts/setup.sh
 python scripts/validate_skill.py
 bash scripts/package_skillhub.sh
-python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.0.2-skillhub.zip
+python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.0.3-skillhub.zip
 ```
 
 The source version, README badges, changelog, setup output, and release zip must agree.
@@ -144,7 +144,7 @@ The source version, README badges, changelog, setup output, and release zip must
 
 ## Version History
 
-### 2.0.2 — 2026-05-14
+### 2.0.3 — 2026-05-14
 
 - Converted `SKILL.md` into a lightweight routing layer.
 - Moved long-form architecture and operating guidance into `references/`.
