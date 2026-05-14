@@ -2,7 +2,7 @@
 
 > 把你的 Obsidian vault 变成 AI 可以读取的“个人身份层”。任何 AI 助手只要先读 `ME.md` 和 `AGENT.md`，就能理解你是谁、你怎么思考、你希望它怎么协作。
 
-[![version](https://img.shields.io/badge/version-2.0.2-blue)](./SKILL.md)
+[![version](https://img.shields.io/badge/version-2.1.0-preview.1-blue)](./SKILL.md)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![category](https://img.shields.io/badge/category-identity-purple)](#)
 [![platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20WSL-lightgrey)](#)
@@ -29,6 +29,7 @@
 | `AGENT.md` | 行为规范，定义语言风格、输出格式、工具规则和协作边界 |
 | `CLAUDE.md` | Claude Code 薄适配器 |
 | `AGENTS.md` | Codex / OpenAI Agents 薄适配器 |
+| `30.knowledge/00.system/ai-agent-operating-guide.md` | AI 协作统一操作手册 |
 | `30.knowledge/00.system/methodology.md` | Knowledge Palace v2 知识生产操作手册 |
 
 ---
@@ -80,6 +81,13 @@ your-vault/
 └── 50.maps/
 ```
 
+当前预览分支还包含 AI 协作模式能力：
+
+- `references/ai-collaboration-protocol.md`：定义 `light` / `standard` / `strict` 模式。
+- `references/agent-onboarding-test.md`：检测 Agent 是否理解这套协作体系。
+- `references/task-closure-sop.md`：任务收尾沉淀检查。
+- `30.knowledge/00.system/ai-agent-operating-guide.md`：full 模式安装的统一协作操作手册。
+
 核心思想是“双轨设计”：
 
 | 轨道 | 内容 | AI 权限 |
@@ -98,6 +106,7 @@ your-vault/
 如果 AI 要处理 `30.knowledge/`，应先读取：
 
 ```text
+30.knowledge/00.system/ai-agent-operating-guide.md
 30.knowledge/00.system/methodology.md
 ```
 
@@ -123,7 +132,7 @@ your-vault/
 bash -n scripts/setup.sh
 python scripts/validate_skill.py
 bash scripts/package_skillhub.sh
-python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.0.2-skillhub.zip
+python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.1.0-preview.1-skillhub.zip
 ```
 
 ---

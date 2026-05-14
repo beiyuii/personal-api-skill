@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VERSION="2.0.2"
+VERSION="2.1.0-preview.1"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 DIST_DIR="$ROOT/dist/skillhub"
@@ -19,11 +19,16 @@ required_paths=(
     "templates/AGENT.md"
     "templates/CLAUDE.md"
     "templates/AGENTS.md"
+    "templates/ai-agent-operating-guide.md"
     "templates/methodology.md"
+    "templates/project-overview.md"
     "templates/vault.gitignore"
+    "references/ai-collaboration-protocol.md"
+    "references/agent-onboarding-test.md"
     "references/architecture.md"
     "references/vault-layout.md"
     "references/operation-boundaries.md"
+    "references/task-closure-sop.md"
     "references/maintenance.md"
     "agents/openai.yaml"
 )

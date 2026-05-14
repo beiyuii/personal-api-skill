@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.0-preview.1] — 2026-05-14
+
+### Added
+- Preview AI collaboration protocol with `light`, `standard`, and `strict` modes.
+- Agent onboarding self-test for verifying whether an AI agent understands the vault workflow.
+- Task closure SOP for project status, Obsidian outputs, Memory candidates, SOP updates, and next actions.
+- Canonical `templates/ai-agent-operating-guide.md`, installed into `30.knowledge/00.system/` in full mode.
+- Structured `templates/project-overview.md` for `00.context/projects/project-overview.md`.
+
+### Changed
+- Preview branch version set to `2.1.0-preview.1`.
+- Setup, validation, and package scripts now include the preview collaboration assets.
+- Documentation now distinguishes stable scaffold behavior from preview collaboration behavior.
+
+---
+
 ## [2.0.2] — 2026-05-14
 
 ### Added

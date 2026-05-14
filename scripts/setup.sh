@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Personal API — Setup Script (v2.0.2)
+# Personal API — Setup Script (v2.1.0-preview.1)
 # Scaffolds the identity layer and, by default, the full Knowledge Palace v2
 # 30.knowledge system inside an Obsidian vault.
 #
@@ -55,7 +55,9 @@ required_templates=(
     "AGENT.md"
     "CLAUDE.md"
     "AGENTS.md"
+    "ai-agent-operating-guide.md"
     "methodology.md"
+    "project-overview.md"
     "vault.gitignore"
 )
 
@@ -113,7 +115,7 @@ copy_if_missing "$TEMPLATES_DIR/vault.gitignore"    "$VAULT/.gitignore"   ".giti
 
 ensure_file "$VAULT/00.context/now.md"                         "00.context/now.md"
 ensure_file "$VAULT/00.context/open-questions.md"              "00.context/open-questions.md"
-ensure_file "$VAULT/00.context/projects/project-overview.md"   "00.context/projects/project-overview.md"
+copy_if_missing "$TEMPLATES_DIR/project-overview.md"           "$VAULT/00.context/projects/project-overview.md" "00.context/projects/project-overview.md"
 ensure_file "$VAULT/10.identity/values.md"                     "10.identity/values.md"
 ensure_file "$VAULT/10.identity/vision.md"                     "10.identity/vision.md"
 ensure_file "$VAULT/10.identity/thinking-models.md"            "10.identity/thinking-models.md"
@@ -144,6 +146,9 @@ if [ "$MODE" = "full" ]; then
     copy_if_missing "$TEMPLATES_DIR/methodology.md" \
                     "$VAULT/30.knowledge/00.system/methodology.md" \
                     "30.knowledge/00.system/methodology.md"
+    copy_if_missing "$TEMPLATES_DIR/ai-agent-operating-guide.md" \
+                    "$VAULT/30.knowledge/00.system/ai-agent-operating-guide.md" \
+                    "30.knowledge/00.system/ai-agent-operating-guide.md"
 fi
 
 echo ""
@@ -154,7 +159,7 @@ echo "  1. Open $VAULT in Obsidian."
 echo "  2. Fill in ME.md with your real identity context."
 echo "  3. Fill in AGENT.md with your collaboration rules."
 if [ "$MODE" = "full" ]; then
-    echo "  4. Read 30.knowledge/00.system/methodology.md before using AI for knowledge production."
+    echo "  4. Read 30.knowledge/00.system/ai-agent-operating-guide.md before deep AI collaboration."
     echo "  5. Tell your AI: \"Read my ME.md and AGENT.md to understand my context.\""
 else
     echo "  4. Tell your AI: \"Read my ME.md and AGENT.md to understand my context.\""

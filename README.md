@@ -4,7 +4,7 @@
 
 中文说明：[README.zh-CN.md](./README.zh-CN.md)
 
-[![version](https://img.shields.io/badge/version-2.0.2-blue)](./SKILL.md)
+[![version](https://img.shields.io/badge/version-2.1.0-preview.1-blue)](./SKILL.md)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![category](https://img.shields.io/badge/category-identity-purple)](#)
 [![platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20WSL-lightgrey)](#)
@@ -19,6 +19,7 @@ Every new chat, project, or AI tool usually starts with re-explaining your backg
 - `ME.md` — identity contract.
 - `AGENT.md` — behavior contract.
 - `CLAUDE.md` / `AGENTS.md` — thin adapter files for agent runtimes.
+- `30.knowledge/00.system/ai-agent-operating-guide.md` — canonical AI collaboration guide.
 - `30.knowledge/00.system/methodology.md` — Knowledge Palace v2 operating manual.
 
 Default setup creates the full Knowledge Palace v2 structure, including `30.knowledge/`. Use `--minimal` only when you want the lightweight identity layer without the knowledge-production system.
@@ -65,6 +66,13 @@ Minimal mode creates the identity layer, thin adapters, and basic navigation. It
 
 The setup script preserves existing files and only creates missing files.
 
+Preview collaboration assets are included in this branch:
+
+- `references/ai-collaboration-protocol.md` — `light` / `standard` / `strict` mode switch.
+- `references/agent-onboarding-test.md` — self-test for agent understanding.
+- `references/task-closure-sop.md` — closure checklist for durable task sedimentation.
+- `30.knowledge/00.system/ai-agent-operating-guide.md` — installed in full mode.
+
 ---
 
 ## Architecture
@@ -81,6 +89,9 @@ See:
 - [references/architecture.md](./references/architecture.md)
 - [references/vault-layout.md](./references/vault-layout.md)
 - [references/operation-boundaries.md](./references/operation-boundaries.md)
+- [references/ai-collaboration-protocol.md](./references/ai-collaboration-protocol.md)
+- [references/agent-onboarding-test.md](./references/agent-onboarding-test.md)
+- [references/task-closure-sop.md](./references/task-closure-sop.md)
 - [references/maintenance.md](./references/maintenance.md)
 
 ---
@@ -107,13 +118,13 @@ Validate the skill before publishing:
 bash -n scripts/setup.sh
 python scripts/validate_skill.py
 bash scripts/package_skillhub.sh
-python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.0.2-skillhub.zip
+python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.1.0-preview.1-skillhub.zip
 ```
 
 The generated SkillHub package is:
 
 ```text
-dist/skillhub/personal-api-2.0.2-skillhub.zip
+dist/skillhub/personal-api-2.1.0-preview.1-skillhub.zip
 ```
 
 Older local packages under `dist/skillhub/` are historical artifacts.

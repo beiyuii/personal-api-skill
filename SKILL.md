@@ -1,12 +1,12 @@
 ---
 name: personal-api
-version: "2.0.2"
+version: "2.1.0-preview.1"
 description: Turn an Obsidian vault into an AI-readable personal identity layer. Use when setting up ME.md and AGENT.md, scaffolding the full Knowledge Palace v2 structure, onboarding AI assistants, or maintaining the vault contract. Default setup creates the complete 30.knowledge system; --minimal creates only the lightweight identity layer.
 license: MIT
 compatibility: Requires an Obsidian vault. Works with any AI agent that can read files (Claude Code, Codex, Cursor, ChatGPT, Gemini, OpenClaw, Hermes Agent). macOS, Linux, Windows (WSL).
 metadata:
   author: beiyuii
-  version: "2.0.2"
+  version: "2.1.0-preview.1"
   category: identity
   tags: "obsidian identity knowledge-management personal-api second-brain digital-twin pkm zettelkasten para moc knowledge-palace ai-agent context-engineering prompt-engineering"
   related_skills: "personal-knowledge-vault knowledge-palace-builder"
@@ -20,7 +20,8 @@ The skill has three core contracts:
 
 1. `ME.md` — identity contract.
 2. `AGENT.md` — behavior contract.
-3. `30.knowledge/00.system/methodology.md` — Knowledge Palace v2 operating manual for the knowledge-production track.
+3. `30.knowledge/00.system/ai-agent-operating-guide.md` — canonical agent operating guide.
+4. `30.knowledge/00.system/methodology.md` — Knowledge Palace v2 operating manual for the knowledge-production track.
 
 Default setup creates the full Knowledge Palace v2 structure, including `30.knowledge/`. Use `--minimal` only when the user explicitly wants the identity layer without the knowledge-production system.
 
@@ -33,6 +34,7 @@ Use this skill when the user wants to:
 - set up Claude/Codex adapter files for a vault;
 - initialize the `30.knowledge/` Knowledge Palace v2 system;
 - explain how AI agents should read and operate inside the vault;
+- choose an AI collaboration mode (`light`, `standard`, or `strict`);
 - validate or package this skill for release.
 
 Do not use this skill to invent or fill in the user's real identity content. AI may explain fields and provide examples, but the user must provide the actual personal answers.
@@ -50,6 +52,7 @@ Read:
 - `templates/AGENT.md`
 - `templates/CLAUDE.md`
 - `templates/AGENTS.md`
+- `templates/ai-agent-operating-guide.md`
 - `templates/methodology.md`
 
 Run:
@@ -65,6 +68,7 @@ Expected full-mode result:
 - thin agent adapters `CLAUDE.md` and `AGENTS.md`;
 - Track A directories and stubs;
 - full `30.knowledge/` tree;
+- `30.knowledge/00.system/ai-agent-operating-guide.md`;
 - `30.knowledge/00.system/methodology.md`.
 
 For identity-only setup:
@@ -109,7 +113,25 @@ Rules:
 - permanent notes and frameworks require human review;
 - do not modify Track A core identity content without explicit authorization.
 
-### 4. Validate And Package
+### 4. Choose Collaboration Mode
+
+Use when a user imports a task and the right level of process is unclear.
+
+Read:
+
+- `references/ai-collaboration-protocol.md`
+- `references/agent-onboarding-test.md` when strict onboarding confidence is needed
+- `references/task-closure-sop.md` when closure or sedimentation is expected
+
+Rules:
+
+- default to `standard`;
+- recommend `light` for quick answers and low-risk work;
+- recommend `strict` for release, migration, high-risk writes, long-running knowledge work, or multi-agent work;
+- let the user override the mode in natural language;
+- keep evidence proportional to the selected mode.
+
+### 5. Validate And Package
 
 Use before publishing or reviewing this skill.
 
@@ -125,7 +147,7 @@ Run:
 bash -n scripts/setup.sh
 python scripts/validate_skill.py
 bash scripts/package_skillhub.sh
-python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.0.2-skillhub.zip
+python scripts/validate_skill.py --dist dist/skillhub/personal-api-2.1.0-preview.1-skillhub.zip
 ```
 
 The source version, README badges, changelog, setup output, and release zip must agree.
@@ -138,19 +160,27 @@ The source version, README badges, changelog, setup output, and release zip must
 | Architecture and method | `references/architecture.md` |
 | Expected vault tree | `references/vault-layout.md` |
 | AI permission boundaries | `references/operation-boundaries.md` |
+| Collaboration mode selection | `references/ai-collaboration-protocol.md` |
+| Agent self-check | `references/agent-onboarding-test.md` |
+| Task closure | `references/task-closure-sop.md` |
 | Health checks and maintenance | `references/maintenance.md` |
 | Install behavior | `scripts/setup.sh` |
 | Release checks | `scripts/validate_skill.py` |
 
 ## Version History
 
+### 2.1.0-preview.1 — 2026-05-14
+
+- Added preview AI collaboration protocol with `light`, `standard`, and `strict` modes.
+- Added agent onboarding self-test and task-closure SOP.
+- Added canonical `ai-agent-operating-guide.md` and structured project overview template.
+- Extended setup, validation, and packaging to include collaboration preview assets.
+
 ### 2.0.2 — 2026-05-14
 
 - Converted `SKILL.md` into a lightweight routing layer.
 - Moved long-form architecture and operating guidance into `references/`.
-- Added adapter templates for Claude and Codex/OpenAI agents.
-- Added validation and package scripts.
-- Aligned source files, setup output, changelog, and SkillHub release package.
+- Added adapter templates, validation scripts, package scripts, and aligned release package.
 
 ### 2.0.0 — 2026-05-08
 
