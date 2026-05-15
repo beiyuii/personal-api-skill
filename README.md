@@ -76,6 +76,24 @@ Personal API uses a dual-track vault model:
 | Track A: Identity Archive | `ME.md`, `AGENT.md`, `00.context/`, `10.identity/`, `20.skills/`, `40.memory-stream/`, `50.maps/` | Read first; suggest carefully; do not rewrite core identity without authorization |
 | Track B: Knowledge Production | `30.knowledge/` | Compile, organize, link, and maintain under methodology rules |
 
+### 1. Vault overall structure
+
+`ME.md` is the entry point. The vault splits into an identity track and a knowledge-production track so that personal context stays stable while working knowledge can keep evolving.
+
+![Vault Architecture](docs/vault-architecture.png)
+
+### 2. Knowledge Palace v2 flow
+
+The knowledge-production track follows a lifecycle pipeline from capture to archive.
+
+![Knowledge Palace Flow](docs/knowledge-palace-flow.png)
+
+Core lifecycle:
+
+```text
+capture -> intelligence / research -> notes -> frameworks / projects -> outputs -> archive
+```
+
 See:
 
 - [references/architecture.md](./references/architecture.md)

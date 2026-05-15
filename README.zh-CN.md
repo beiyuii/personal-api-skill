@@ -89,6 +89,28 @@ your-vault/
 
 ---
 
+## 架构图
+
+### 1. 整体双轨结构
+
+`ME.md` 是整个 vault 的入口。系统被拆成两条轨道：一条负责稳定的个人身份，一条负责持续演进的知识生产。
+
+![Vault Architecture](docs/vault-architecture.png)
+
+### 2. Knowledge Palace v2 流程
+
+`30.knowledge/` 不是普通文件夹堆叠，而是一条从采集、研究、笔记到输出、归档的生命周期流水线。
+
+![Knowledge Palace Flow](docs/knowledge-palace-flow.png)
+
+核心流转：
+
+```text
+capture -> intelligence / research -> notes -> frameworks / projects -> outputs -> archive
+```
+
+---
+
 ## 标准使用方式
 
 安装完成后，你可以对任何 AI 助手说：
